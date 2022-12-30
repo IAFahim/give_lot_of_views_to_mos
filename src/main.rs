@@ -1,4 +1,4 @@
-use std::io::{self, Write};
+use std::io::{Write};
 use std::net::TcpStream;
 use std::thread;
 use std::time::Duration;
@@ -6,7 +6,7 @@ use std::time::Duration;
 fn main() {
     let mut stream = TcpStream::connect("camo.githubusercontent.com:80").unwrap();
     loop {
-        thread::sleep(Duration::from_millis(150));
+        thread::sleep(Duration::from_millis(100));
         run(&mut stream);
     }
 }
